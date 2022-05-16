@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {IPost} from "../interfaces/IPost";
+
+import {IPost} from "../interfaces/post.interface";
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class PostService {
       .get<IPost[]>(this.url);
   }
 
-  getPost(id: number): Observable<IPost>{
+  getPost(id: string): Observable<IPost>{
     return this
       .http
       .get<IPost>(this.url + '/' + id);

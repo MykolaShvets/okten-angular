@@ -1,1 +1,5 @@
-<p>{{user.id}}. {{user.name}}</p>
+<div class="user">
+  <p>{{user.id}}. {{user.name}}</p>
+  <a [routerLink]="['user', user.id]" class="details__btn">Details</a>
+</div>
+

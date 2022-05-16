@@ -1,1 +1,4 @@
-<p>{{ comment.id }}. {{ comment.name }}</p>
+<div class="comment">
+  <p>{{ comment.id }}. {{ comment.name }}</p>
+  <a [routerLink]="['comment', comment.id]"  [state]="{data: comment}"  class="details__btn">Details</a>
+</div>

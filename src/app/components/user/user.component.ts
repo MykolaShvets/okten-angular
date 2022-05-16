@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IUser} from "../../interfaces/IUser";
+
+import {IUser} from "../../interfaces/user.interface";
 
 @Component({
   selector: 'app-user',

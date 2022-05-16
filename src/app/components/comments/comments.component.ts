@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {IComment} from "../../interfaces/IComment";
+
+import { IComment } from "../../interfaces/comment.interface";
 import {CommentService} from "../../services/comment.service";
 
 @Component({
