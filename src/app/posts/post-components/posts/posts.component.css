@@ -1,0 +1,9 @@
+.posts__wrapper{
+  display: flex;
+  gap: 10px;
+}
+
+.posts{
+  padding-right: 10px;
+  border-right: 1px solid #000;
+}
