@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {HttpClientModule} from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 
 import { UsersRoutingModule } from './users-routing.module';
-import { UsersComponent, UserDetailsComponent, UserComponent } from './user-components';
-import {UserService} from "./user-services/user.service";
+import { UsersComponent, UserDetailsComponent, UserComponent } from './components';
+import { UserService, UsersResolver, UserDetailsResolver } from './services';
 
 
 @NgModule({
@@ -19,7 +19,9 @@ import {UserService} from "./user-services/user.service";
     HttpClientModule
   ],
   providers: [
-    UserService
+    UserService,
+    UsersResolver,
+    UserDetailsResolver
   ]
 })
 export class UsersModule { }

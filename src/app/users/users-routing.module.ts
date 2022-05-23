@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import {UserDetailsComponent, UsersComponent} from "./user-components";
+import {UserDetailsComponent, UsersComponent} from "./components";
+import {UserDetailsResolver, UsersResolver} from "./services";
 
 const routes: Routes = [
-  {path: '', component: UsersComponent, children: [
-      {path: ':userId', component: UserDetailsComponent}
+  {path: '', component: UsersComponent, resolve: {usersData: UsersResolver}, children: [
+      {path: ':userId', resolve: {userDetails: UserDetailsResolver}, component: UserDetailsComponent}
     ]}
 ];
 

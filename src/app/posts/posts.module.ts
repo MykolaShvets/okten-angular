@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import {HttpClientModule} from "@angular/common/http";
 
 import { PostsRoutingModule } from './posts-routing.module';
-import { PostDetailComponent,PostComponent, PostsComponent } from './post-components';
-import {PostService} from "./post-services/post.service";
+import { PostDetailComponent,PostComponent, PostsComponent } from './components';
+import {PostDetailsResolver, PostService, PostsResolver} from "./services";
 
 
 @NgModule({
@@ -18,6 +18,10 @@ import {PostService} from "./post-services/post.service";
     PostsRoutingModule,
     HttpClientModule
   ],
-  providers: [PostService]
+  providers: [
+    PostService,
+    PostsResolver,
+    PostDetailsResolver
+  ]
 })
 export class PostsModule { }
