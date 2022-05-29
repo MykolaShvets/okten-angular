@@ -1,0 +1,22 @@
+.cars__form{
+  text-align: center;
+}
+
+.cars__form div{
+  margin: 10px;
+}
+
+.cars__list{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cars__item{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
